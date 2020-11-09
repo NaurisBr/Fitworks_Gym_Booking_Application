@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3874ADE-B2AD-4524-B8FE-2EA6F8DCA6DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FitworksApp</RootNamespace>
+    <AssemblyName>FitworksApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountInfo.cs" />
+    <Compile Include="AccountSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSettings.Designer.cs">
+      <DependentUpon>AccountSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardDetails.Designer.cs">
+      <DependentUpon>CardDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="class_booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="class_booking.Designer.cs">
+      <DependentUpon>class_booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.Designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomButton.Designer.cs">
+      <DependentUpon>CustomButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomButton2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomButton2.Designer.cs">
+      <DependentUpon>CustomButton2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyClasses.Designer.cs">
+      <DependentUpon>MyClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summary.Designer.cs">
+      <DependentUpon>Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccountDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserAccountDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountSettings.resx">
+      <DependentUpon>AccountSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardDetails.resx">
+      <DependentUpon>CardDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="class_booking.resx">
+      <DependentUpon>class_booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyClasses.resx">
+      <DependentUpon>MyClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Summary.resx">
+      <DependentUpon>Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AccountInfo.datasource" />
+    <None Include="Properties\DataSources\AccountSettings.datasource" />
+    <None Include="Properties\DataSources\CardDetails.datasource" />
+    <None Include="Properties\DataSources\Class1.datasource" />
+    <None Include="Properties\DataSources\CreateAccount.datasource" />
+    <None Include="Properties\DataSources\Dapper.CommandDefinition.datasource" />
+    <None Include="Properties\DataSources\Dapper.CustomPropertyTypeMap.datasource" />
+    <None Include="Properties\DataSources\Dapper.DbString.datasource" />
+    <None Include="Properties\DataSources\Dapper.DefaultTypeMap.datasource" />
+    <None Include="Properties\DataSources\Dapper.DynamicParameters.datasource" />
+    <None Include="Properties\DataSources\Dapper.ExplicitConstructorAttribute.datasource" />
+    <None Include="Properties\DataSources\Dapper.IWrappedDataReader.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+GridReader.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+ICustomQueryParameter.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+Identity.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+IDynamicParameters.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+IMemberMap.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+IParameterCallbacks.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+IParameterLookup.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+ITypeHandler.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+ITypeMap.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+Settings.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+StringTypeHandler`1.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+TypeHandlerCache`1.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+TypeHandler`1.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper+UdtTypeHandler.datasource" />
+    <None Include="Properties\DataSources\Dapper.SqlMapper.datasource" />
+    <None Include="Properties\DataSources\DataAccess.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\Helper.datasource" />
+    <None Include="Properties\DataSources\Main.datasource" />
+    <None Include="Properties\DataSources\Membership.datasource" />
+    <None Include="Properties\DataSources\MyBookings.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Settings1.datasource" />
+    <None Include="Properties\DataSources\StylistsApp.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\StylistsApp.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\StylistsApp.UserAccountDatabaseDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\StylistsApp.UserAccountDatabaseDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\StylistsApp.UserAccountDatabaseDataSetTableAdapters.TableTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Summary.datasource" />
+    <None Include="Properties\DataSources\UserAccountDatabaseDataSet.datasource" />
+    <None Include="Properties\DataSources\UserAccountDatabaseDataSet.TableDataTable.datasource" />
+    <None Include="Properties\DataSources\UserAccountDatabaseDataSet.TableRow.datasource" />
+    <None Include="Properties\DataSources\UserAccountDatabaseDataSet.TableRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\UserAccountDatabaseDataSet.TableRowChangeEventHandler.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UserAccountDatabaseDataSet.xsc">
+      <DependentUpon>UserAccountDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UserAccountDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserAccountDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserAccountDatabaseDataSet.xss">
+      <DependentUpon>UserAccountDatabaseDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UserAccountDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UserAccountDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>UserAccountDatabase.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
