@@ -78,7 +78,7 @@ namespace FitworksApp
 
 
             //Connection string used to access the local database 
-            SqlConnection sql = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nauri\source\repos\FitworksApp\Database\UserAccountDatabase.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection sql = new SqlConnection(DataAccess.ConnString);
             sql.Open();
             SqlCommand sqa = new SqlCommand("Select f1, f2, f3, f4, f5, membershipstatus from [Fail] where emailf =@emailf", sql);
             sqa = new SqlCommand("Select f1, f2, f3, f4, f5, membershipstatus from [Fail] where emailf =@emailf", sql);

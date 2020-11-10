@@ -166,7 +166,7 @@ namespace FitworksApp
             label3.BackColor = Main.SetValueForMembershipColourBack;
 
             //Connection string used to access the local database 
-            SqlConnection sql = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nauri\source\repos\FitworksApp\Database\UserAccountDatabase.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection sql = new SqlConnection(DataAccess.ConnString);
             sql.Open();                                         // (*) may give the 1/0's.. change it
             SqlCommand sqa = new SqlCommand("Select name, surname, email, password, dateOfBirth from [Table] where email =@email", sql); 
             sqa.Parameters.AddWithValue("@email", LoginForm.SetValueForText1);

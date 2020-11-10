@@ -18,20 +18,23 @@ namespace FitworksApp
 {
     public class DataAccess
     {
-        //Change this string only 
-        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nauri\source\repos\FitworksApp\Database\UserAccountDatabase.mdf;Integrated Security=True;Connect Timeout=30";
+        //*IMPORTANT* 
+        //If the application doesn't run after you have entered your credentials, then the connection string underneath is the reason why,
+        //you may need to set up your own local database connection string as this database does not run on a live server. 
+        public static string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nauri\source\repos\FitworksApp\Database\UserAccountDatabase.mdf;Integrated Security=True;Connect Timeout=30";    
         public List<AccountInfo> GetAccounts(string email)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString)) 
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnString)) 
             {
                 var output = connection.Query<AccountInfo>($"select * from [Table]").ToList();
                 return output;
             }
         }
-
+        
+        
         public void InsertNewAccount(string first_name, string Surname, string account_creation_email, string accountCreation_password2, string account_creation_DOB)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnString))
             {
                 // AccountInfo newAccount = new AccountInfo { email = account_creation_email, password = accountCreation_password2, dateOfBirth = account_creation_DOB };
                 List<AccountInfo> accounts = new List<AccountInfo>();
@@ -43,7 +46,7 @@ namespace FitworksApp
         }
         public void InsertNewCardDetails(string card_Type, string card_Number, string expiry_date, string _ccv, string _duration)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnString))
             {
                 List<AccountInfo> accounts = new List<AccountInfo>();
                 accounts.Add(new AccountInfo {cardType = card_Type, cardNumber = card_Number, expiryDate = expiry_date, ccv = _ccv, duration = _duration });
@@ -53,7 +56,7 @@ namespace FitworksApp
         }
         public void InsertNewCardDetails2(string card_Type, string card_Number, string expiry_date, string _ccv, string _duration, string _email, string _membershipStatus)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnString))
             {
                 List<AccountInfo> accounts = new List<AccountInfo>();
                 accounts.Add(new AccountInfo { f1 = card_Type, f2 = card_Number, f3 = expiry_date, f4 = _ccv, f5 = _duration, emailf = _email, membershipStatus = _membershipStatus});
@@ -63,7 +66,7 @@ namespace FitworksApp
         }
         public void InsertSessions(string _session1, string _email2)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnString))
             {
                 List<AccountInfo> accounts = new List<AccountInfo>();
                 accounts.Add(new AccountInfo { Session1 = _session1, email2 = _email2 });
@@ -73,7 +76,7 @@ namespace FitworksApp
         }
         public void UpdateMembershipStatus(string _membershipStatus)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnString))
             {
                 List<AccountInfo> accounts = new List<AccountInfo>();
                 accounts.Add(new AccountInfo {membershipStatus = _membershipStatus });
@@ -84,7 +87,7 @@ namespace FitworksApp
 
         public void UpdateSessionStatus(string sessionName)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnString))
             {
                 List<AccountInfo> accounts = new List<AccountInfo>();
                 accounts.Add(new AccountInfo { Session1 = sessionName });
@@ -95,7 +98,7 @@ namespace FitworksApp
       
         public void ButtonCheckForeachSession()
         {
-            SqlConnection sql = new SqlConnection(connectionString);
+            SqlConnection sql = new SqlConnection(ConnString);
             sql.Open();
             // (*) may give the 1/0's.. change it
             SqlCommand sqa = new SqlCommand("Select Session1 from [SessionsBooked] where email2 =@email2", sql);
@@ -113,7 +116,7 @@ namespace FitworksApp
         }
         public void UpdateSession2(string sessionName)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnString))
             {
                 List<AccountInfo> accounts = new List<AccountInfo>();
                 accounts.Add(new AccountInfo { Session1 = sessionName });
@@ -122,7 +125,7 @@ namespace FitworksApp
         }
         public void GetStatusAndSessionInfo()
         {
-            SqlConnection sql = new SqlConnection(connectionString);
+            SqlConnection sql = new SqlConnection(ConnString);
             sql.Open();                                         // (*) may give the 1/0's.. change it
             SqlDataAdapter sqa = new SqlDataAdapter("Select count(*) From Table1 where email ='" + LoginForm.SetValueForText1 + "' and password = '" + LoginForm.SetValueForPass + "'", sql);
 
@@ -147,7 +150,7 @@ namespace FitworksApp
             }
 
             //MOST THINGS WORK BUT REQUIRE 2 CLICKS. SESSIONS ARE SOMETIMES REVERSED AND CONTAIN OTHER BUTTON MEANINGS 
-            sql = new SqlConnection(connectionString);
+            sql = new SqlConnection(ConnString);
             sql.Open();
             // (*) may give the 1/0's.. change it
             SqlCommand sqa3 = new SqlCommand("Select Session1 from [SessionsBooked] where email2 =@email2", sql);
@@ -173,7 +176,7 @@ namespace FitworksApp
         }
         public void LoginCheck(List<AccountInfo> ppl)
         {
-            SqlConnection sql = new SqlConnection(connectionString);
+            SqlConnection sql = new SqlConnection(ConnString);
             sql.Open();
             SqlDataAdapter sqa = new SqlDataAdapter("Select count(*) From [Table] where email ='" + LoginForm.SetValueForText1 + "' and password = '" + LoginForm.SetValueForPass + "'", sql);
             DataTable dt = new DataTable();
