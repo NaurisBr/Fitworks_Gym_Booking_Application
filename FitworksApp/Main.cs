@@ -105,7 +105,7 @@ namespace FitworksApp
         }
 
         private void LogoutButton_Click(object sender, EventArgs e)
-        {
+        {       
             this.Close();
             LoginForm f = new LoginForm();
             f.Show(); 
