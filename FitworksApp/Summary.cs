@@ -90,10 +90,11 @@ namespace FitworksApp
                 AccountSettings.button3WasClicked = false;
                 this.summaryListBox.Items.Add("Duration: " + da.GetValue(4).ToString());
                 this.summaryListBox.Items.Add("Payment: " + da.GetValue(0).ToString());
-                this.summaryListBox.Items.Add("Card Number: " + da.GetValue(1).ToString());
+                this.summaryListBox.Items.Add("Card Number: " + MaskCardNumber(CardDetails.SetValueForCardNumber));
                 this.summaryListBox.Items.Add("Expiry Date: " + da.GetValue(2).ToString());
-                this.summaryListBox.Items.Add("CCV: " + da.GetValue(3).ToString());
-
+                //this.summaryListBox.Items.Add("CCV: " + da.GetValue(3).ToString());
+                
+              
             }
             sql.Close();
 
@@ -204,5 +205,15 @@ namespace FitworksApp
         {
 
         }
+
+        public string MaskCardNumber(string num)
+        {
+            string text = num;
+            if (text.Length > 4)
+                return num = text.Substring(text.Length - 4).PadLeft(text.Length, 'X');
+            return "";
+        }
+      
+    
     }
 }

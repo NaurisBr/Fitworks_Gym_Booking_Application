@@ -43,7 +43,8 @@ namespace FitworksApp
             SetValueForExpiryDate = expiryDateTextBox.Text;
             SetValueForCCV = ccvTextBox.Text;
             SetValueForDuration = durationComboBox.SelectedItem.ToString();
-            SetValueForMembershipStatus = textBox1.Text; 
+            SetValueForMembershipStatus = textBox1.Text;
+            
             //this method inserts data from the parameter input fields into the database for each user 
             db.InsertNewCardDetails2(SetValueForCardType, SetValueForCardNumber, SetValueForExpiryDate, SetValueForCCV, SetValueForDuration, LoginForm.SetValueForText1, SetValueForMembershipStatus);
            // db.UpdateMembershipStatus(textBox1.Text); 
@@ -175,6 +176,7 @@ namespace FitworksApp
             return false; 
         }
 
+        
         private void button5_Click(object sender, EventArgs e)
         {
             if (panel3.Height == 531 && panel3.Width == 199)

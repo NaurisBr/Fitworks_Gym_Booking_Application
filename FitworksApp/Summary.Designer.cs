@@ -71,7 +71,7 @@
             this.summaryListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.summaryListBox.FormattingEnabled = true;
             this.summaryListBox.ItemHeight = 22;
-            this.summaryListBox.Location = new System.Drawing.Point(83, 139);
+            this.summaryListBox.Location = new System.Drawing.Point(66, 139);
             this.summaryListBox.Name = "summaryListBox";
             this.summaryListBox.Size = new System.Drawing.Size(286, 220);
             this.summaryListBox.TabIndex = 0;
@@ -168,7 +168,7 @@
             this.panel3.Controls.Add(this.sliderMenuBackImage);
             this.panel3.Location = new System.Drawing.Point(0, -2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(256, 639);
+            this.panel3.Size = new System.Drawing.Size(10, 639);
             this.panel3.TabIndex = 60;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
