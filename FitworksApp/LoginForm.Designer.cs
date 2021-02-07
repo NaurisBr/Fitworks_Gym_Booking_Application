@@ -273,7 +273,7 @@
             // 
             // LoginButton1
             // 
-            this.LoginButton1.Angle = 284F;
+            this.LoginButton1.Angle = 57F;
             this.LoginButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.LoginButton1.BorderRadius = 20;
             this.LoginButton1.Color0 = System.Drawing.Color.Cyan;
@@ -289,7 +289,7 @@
             this.LoginButton1.Load += new System.EventHandler(this.LoginButton1_Load);
             this.LoginButton1.Click += new System.EventHandler(this.LoginButton1_Click);
             // 
-            // Form1
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -312,7 +312,7 @@
             this.Controls.Add(this.emailLogin_textbox);
             this.Controls.Add(this.loginBackgroundImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
