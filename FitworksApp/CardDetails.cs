@@ -146,6 +146,9 @@ namespace FitworksApp
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
+        /// 
+
+        //validating card number
         public bool IsValidCardNumber(string input)
         {
             int[] cardInt = new int[input.Length];
