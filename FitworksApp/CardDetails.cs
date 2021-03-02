@@ -72,6 +72,7 @@ namespace FitworksApp
         /// <param name="e"></param>
         private void CardDetails_Load(object sender, EventArgs e)
         {
+            //changing text field styling
             Center(this);
             DataAccess db = new DataAccess();
             db.GetStatusAndSessionInfo();
