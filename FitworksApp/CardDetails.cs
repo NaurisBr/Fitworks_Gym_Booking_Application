@@ -118,6 +118,7 @@ namespace FitworksApp
         /// <returns></returns>
         public bool IsValidExpiryDate(string input)
         {
+            // adding regular expressions to validate DateTime
             Regex regex = new Regex(@"(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$");
             bool isValid = regex.IsMatch(input.Trim());
             DateTime dt;
