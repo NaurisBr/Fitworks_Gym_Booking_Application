@@ -181,7 +181,7 @@ namespace FitworksApp
             return false; 
         }
 
-        
+        //resizing panel once checkout is complete
         private void button5_Click(object sender, EventArgs e)
         {
             if (panel3.Height == 531 && panel3.Width == 199)
