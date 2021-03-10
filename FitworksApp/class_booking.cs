@@ -93,6 +93,7 @@ namespace FitworksApp
             return "";
         }
 
+        //allocating more bookable timeslots
         public object TimeSlots(TimeSpan ts)
         {
             string formattedTimespan = ts.ToString("hh\\:mm");
