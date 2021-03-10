@@ -144,6 +144,7 @@ namespace FitworksApp
             classListBox3.Items.Add(OverlapBookingCheck(ts3));
 
         }
+        //fixing UI layout for sessions page
         private void button2_Click(object sender, EventArgs e)
         {
             button2Click = true;
