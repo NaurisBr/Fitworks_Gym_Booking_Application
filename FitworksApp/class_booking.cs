@@ -463,7 +463,7 @@ namespace FitworksApp
                 classButton1.Enabled = false;
                 classListBox1.Items.RemoveAt(2);
                 textBox1.Show();
-
+                //Adding expiry dates to sessions
             }
             if (IsExpiredSlot(ts2, textBox2.Text) == textBox2.Text)
             {
