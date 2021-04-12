@@ -192,7 +192,7 @@ namespace FitworksApp
         }
 
         private void panel4_Click(object sender, EventArgs e)
-        {
+        {//Re-adjusting panel width for main page
              
             if (panel3.Height == 531 && panel3.Width == 199)
             {
