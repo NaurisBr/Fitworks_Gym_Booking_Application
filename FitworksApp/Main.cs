@@ -92,6 +92,8 @@ namespace FitworksApp
            
            
         }
+
+        //Creating temporary variables as place holders for user data
         public bool ButtonClickColour = false; 
         public static string SetValueForText = "";
         public static string SetValueForMembership = "";
