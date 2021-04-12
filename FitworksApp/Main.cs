@@ -145,6 +145,7 @@ namespace FitworksApp
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            //Updating membership status 
             class_booking book = new class_booking();
             if(label3.Text == "Inactive")
             {
