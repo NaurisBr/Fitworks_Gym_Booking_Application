@@ -51,7 +51,7 @@ namespace FitworksApp
             Center(this); 
             Summary s = new Summary();
             LoginForm f = new LoginForm();
-
+            //Changing button appearance
             label3.Text = SetValueForMembership;
             label1.Text = CreateAccount.SetValueForFirstName;
             label5.Text = SetValueForSession;
