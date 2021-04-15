@@ -47,7 +47,7 @@ namespace FitworksApp
         /// <param name="sender"></param>
         /// <param name="e"></param>
         public void Main_Load(object sender, EventArgs e)
-        {
+        {//Centering log in page
             Center(this); 
             Summary s = new Summary();
             LoginForm f = new LoginForm();
