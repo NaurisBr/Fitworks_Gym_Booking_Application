@@ -31,7 +31,7 @@ namespace FitworksApp
             db.GetStatusAndSessionInfo();
             this.StartPosition = FormStartPosition.CenterScreen;
 
-        }
+        }//Adding comments to main
         private void Center(Form form)
         {
             form.Location = new Point((Screen.PrimaryScreen.Bounds.Size.Width / 2) - (form.Size.Width / 2), (Screen.PrimaryScreen.Bounds.Size.Height / 2) - (form.Size.Height / 2));
