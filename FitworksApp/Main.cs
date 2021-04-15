@@ -33,7 +33,7 @@ namespace FitworksApp
 
         }//Adding comments to main
         private void Center(Form form)
-        {
+        {//Creating new method for center page
             form.Location = new Point((Screen.PrimaryScreen.Bounds.Size.Width / 2) - (form.Size.Width / 2), (Screen.PrimaryScreen.Bounds.Size.Height / 2) - (form.Size.Height / 2));
         }
         private void SearchButton_Click(object sender, EventArgs e)
