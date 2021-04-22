@@ -596,7 +596,7 @@ namespace FitworksApp
             }
         }
         //tidying up code 
-
+        //pollishing code 
         public bool button1Click = false;
         public bool button2Click = false;
         public static bool button3Click = false;
